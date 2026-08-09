@@ -1,0 +1,2 @@
+# StusyMind-AI
+Entire study preparation with AI
