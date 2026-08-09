@@ -1,0 +1,22 @@
+{
+  "name": "studymind-ai-vercel",
+  "version": "2.0.0",
+  "private": true,
+  "description": "StudyMind AI — Vercel + Supabase RAG study mentor",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "vercel dev"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "mammoth": "^1.7.2",
+    "pdf-parse": "^1.1.1",
+    "tesseract.js": "^5.1.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "vercel": "latest"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "functions": {
+    "api/upload.js": { "maxDuration": 60 },
+    "api/query.js": { "maxDuration": 30 },
+    "api/search.js": { "maxDuration": 30 },
+    "api/documents.js": { "maxDuration": 10 },
+    "api/delete-document.js": { "maxDuration": 10 }
+  }
+}
