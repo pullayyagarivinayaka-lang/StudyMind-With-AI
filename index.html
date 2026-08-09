@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StudyMind AI — Your Answer Sheet, Graded by Intelligence</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="margin-rail" aria-hidden="true"></div>
+
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark">✓</span>
+    <span class="brand-name">StudyMind<em>AI</em></span>
+  </div>
+  <div class="topbar-search">
+    <input id="globalSearch" type="text" placeholder="Search everything you've uploaded…" autocomplete="off">
+    <button id="globalSearchBtn" title="Search">Search</button>
+  </div>
+</header>
+
+<main class="layout">
+
+  <!-- LEFT: material -->
+  <section class="panel material-panel">
+    <h2 class="panel-title"><span class="tick">✓</span> Your Material</h2>
+    <p class="panel-sub">PDFs, notes, textbooks, question papers, answer scripts, spreadsheets — drop it all in.</p>
+
+    <label for="fileInput" class="dropzone" id="dropzone">
+      <div class="dropzone-inner">
+        <span class="dropzone-icon">＋</span>
+        <span>Drop files here or click to upload</span>
+        <span class="dropzone-hint">PDF · DOCX · XLSX/CSV · PNG/JPG (scanned notes) · TXT/MD</span>
+      </div>
+    </label>
+    <input type="file" id="fileInput" multiple hidden accept=".pdf,.docx,.doc,.xlsx,.xls,.csv,.png,.jpg,.jpeg,.webp,.txt,.md">
+
+    <div id="uploadStatus" class="upload-status"></div>
+
+    <div class="doc-list" id="docList">
+      <p class="empty-note">No material uploaded yet. Everything you add here becomes searchable and answerable below.</p>
+    </div>
+  </section>
+
+  <!-- CENTER: chat -->
+  <section class="panel chat-panel">
+    <h2 class="panel-title"><span class="tick">✓</span> Ask StudyMind</h2>
+    <p class="panel-sub">Every answer is grounded in your own uploaded material, structured to score full marks.</p>
+
+    <div class="chat-thread" id="chatThread">
+      <div class="msg bot">
+        <div class="msg-avatar">AI</div>
+        <div class="msg-bubble">Upload your notes or question papers on the left, then ask me anything — a concept, a numerical, or "write this as an exam answer." I'll answer using your own material first.</div>
+      </div>
+    </div>
+
+    <div class="chat-input-row">
+      <textarea id="chatInput" rows="1" placeholder="Ask a question about your uploaded material…"></textarea>
+      <button id="sendBtn" title="Send">➤</button>
+    </div>
+  </section>
+
+  <!-- RIGHT: priority search results -->
+  <section class="panel search-panel" id="searchPanel">
+    <h2 class="panel-title"><span class="tick">✓</span> Priority Search</h2>
+    <p class="panel-sub">Ranked matches across everything you've uploaded, most relevant first.</p>
+    <div id="searchResults" class="search-results">
+      <p class="empty-note">Use the search bar above to find and rank the exact passages that answer a query.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  Made by <strong>Vinayaka Pullayyagari</strong> with <span class="heart">❤️</span>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html>
