@@ -1,2 +1,2 @@
-# StusyMind-AI
+# StudyMind-AI
 Entire study preparation with AI
